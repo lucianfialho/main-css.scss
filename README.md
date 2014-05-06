@@ -86,9 +86,9 @@ Folder that keep the Scaffolding style.
 
 #### `modules`
 
-Quando você está desenvolvendo um aplicativo web, é muito importante utilizar padrões e praticas para mantér um alto nível de modularização/componentização. Este diretório é reposnável por manter os seus módulos. Nomei-os de acordo com a nomenclatura dada na sua camada de comportamento (JavaScript).
+When you are developing a web application, it is very important to use standards and practices to maintain a high level of modularization / componentization. This directory is responsible for maintaining these modules. Name it according to the nomenclature given in your behavior layer (JavaScript).
 
-Ex.:
+Example:
 
     ./
     scripts
