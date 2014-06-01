@@ -8,15 +8,15 @@ The main CSS elements of Ambitious Framework.
 1 - Access your project/assets folder and clone this repository
 
 ```bash
-$ git clone git://github.com/ambitiousframework/main-css.git sass
+$ git clone git://github.com/ambitiousframework/main-css.git [folder]
 ```
 
 2 - Profit!
 
-> **Note:** compass is required. Check the [reference and utilities list]().
+> **Note:** [compass](http://compass-style.org) is required.
 
 
-## File Organization
+## Structure
 
     .
     ├── app
