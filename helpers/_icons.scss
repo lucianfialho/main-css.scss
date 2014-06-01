@@ -1,14 +1,10 @@
 
 @if $use-icons == true {
 
-    @font-face {
-        font-family: "#{$font-name}";
-        src: url("#{$font-path}/#{$font-name}.eot");
-        src: url("#{$font-path}/#{$font-name}.eot?#iefix") format("embedded-opentype"),
-        url("#{$font-path}/#{$font-name}.woff") format("woff"),
-        url("#{$font-path}/#{$font-name}.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
+    i {
+        @if $use-animations == true {
+            @include transition(all linear 0.2s);
+        }
     }
 
     // Initial Styles
@@ -34,12 +30,6 @@
       speak: none;
   }
 
-    // makes the font 33% larger relative to the icon container
-    .icon-large:before {
-        vertical-align: -10%;
-        font-size: 1.333em;
-    }
-
     // makes sure icons active on rollover in links
     a {
         [class^="icon-"],
@@ -62,41 +52,10 @@
         }
     }
 
-    .icons-ul {
-        margin-left:(30em/14);
-        list-style-type: none;
-
-        > li { position: relative; }
-
-        .icon-li {
-            position: absolute;
-            left: -(30em/14);
-            width:(30em/14);
-            text-align: center;
-            line-height: inherit;
-        }
-    }
-
     [class^="icon-"],
     [class*=" icon-"] {
         &.hide {
             display: none;
-        }
-    }
-
-
-    // Floats
-    // ----------------------------
-    .pull-right { float: right; }
-    .pull-left { float: left; }
-
-    [class^="icon-"],
-    [class*=" icon-"] {
-        &.pull-left {
-            margin-right: .3em;
-        }
-        &.pull-right {
-            margin-left: .3em;
         }
     }
 
@@ -121,135 +80,37 @@
             font-size: 2em;
             &.icon-border {
                 border-width: 2px;
-                @include border-radius(4px);
+                @include border-radius($icons-radius);
             }
         }
         .icon-3x {
             font-size: 3em;
             &.icon-border {
                 border-width: 3px;
-                @include border-radius(5px);
+                @include border-radius($icons-radius + 2);
             }
         }
         .icon-4x {
             font-size: 4em;
             &.icon-border {
                 border-width: 4px;
-                @include border-radius(6px);
+                @include border-radius($icons-radius + 3);
             }
         }
 
         .icon-5x {
             font-size: 5em;
             &.icon-border {
-                @include border-radius(7px);
+                @include border-radius($icons-radius + 5);
             }
         }
-
-    }
-
-
-    // Components Classes
-    // ----------------------------
-    @if $icons-components == true {
-
-        [class^="icon-"],
-        [class*=" icon-"] {
-          display: inline;
-          width: auto;
-          height: auto;
-          line-height: normal;
-          vertical-align: baseline;
-          background-image: none;
-          background-position: 0% 0%;
-          background-repeat: repeat;
-          margin-top: 0;
-        }
-
-        .icon-white {
-          background-image: none;
-        }
-
-        .btn {
-          [class^="icon-"],
-          [class*=" icon-"] {
-            //    display: inline;
-            &.icon-large { line-height: .9em; }
-            &.icon-spin { display: inline-block; }
-
-            &.pull-left, &.pull-right {
-              &.icon-2x { margin-top: .18em; }
-            }
-            &.icon-spin.icon-large { line-height: .8em; }
-            }
-        }
-        .btn.btn-small {
-          [class^="icon-"],
-          [class*=" icon-"] {
-            &.pull-left, &.pull-right {
-              &.icon-2x { margin-top: .25em; }
-            }
-          }
-        }
-        .btn.btn-large {
-          [class^="icon-"],
-          [class*=" icon-"] {
-            margin-top: 0;
-            &.pull-left, &.pull-right {
-              &.icon-2x { margin-top: .05em; }
-            }
-            &.pull-left.icon-2x { margin-right: .2em; }
-            &.pull-right.icon-2x { margin-left: .2em; }
-          }
-        }
-
-    }
-
-
-    // Animation
-    // ----------------------------
-    @if $icons-animation == true {
-
-        // Animated rotating icon
-        .icon-spin {
-            display: inline-block;
-            -moz-animation: spin 2s infinite linear;
-            -o-animation: spin 2s infinite linear;
-            -webkit-animation: spin 2s infinite linear;
-            animation: spin 2s infinite linear;
-        }
-        @-moz-keyframes spin {
-            0% { -moz-transform: rotate(0deg); }
-            100% { -moz-transform: rotate(359deg); }
-        }
-        @-webkit-keyframes spin {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(359deg); }
-        }
-        @-o-keyframes spin {
-            0% { -o-transform: rotate(0deg); }
-            100% { -o-transform: rotate(359deg); }
-        }
-        @-ms-keyframes spin {
-            0% { -ms-transform: rotate(0deg); }
-            100% { -ms-transform: rotate(359deg); }
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(359deg); }
-        }
-
-        // Icon rotations and mirroring
-        .icon-rotate-90:before       { @include rotate(90deg); }
-        .icon-rotate-180:before      { @include rotate(180deg); }
-        .icon-rotate-270:before      { @include rotate(270deg); }
-        .icon-flip-horizontal:before { @include scale(-1, 1); }
-        .icon-flip-vertical:before   { @include scale(1, -1); }
 
     }
 
     // Glyphos
     // ----------------------------
+    @include font-face($font-name, $font-path);
+
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //

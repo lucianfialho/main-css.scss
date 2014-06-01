@@ -13,11 +13,12 @@ $ git clone git://github.com/ambitiousframework/main-css.git sass
 
 2 - Profit!
 
+> **Note:** compass is required. Check the [reference and utilities list]().
+
 
 ## File Organization
 
     .
-    ├── _all.scss
     ├── app
     │   ├── _layout.scss
     │   ├── _legacy.scss
@@ -27,7 +28,8 @@ $ git clone git://github.com/ambitiousframework/main-css.git sass
     │   ├── _functions.scss
     │   ├── _grid.scss
     │   ├── _mixins.scss
-    │   └── _print.scss
+    │   ├── _print.scss
+    │   └── _settings.scss
     ├── general
     │   ├── _base.scss
     │   ├── _forms.scss
@@ -35,14 +37,24 @@ $ git clone git://github.com/ambitiousframework/main-css.git sass
     │   └── _tables.scss
     ├── helpers
     │   ├── _animation.scss
-    │   ├── _browser.scss
+    │   ├── _buttons.scss
+    │   ├── _custom.scss
+    │   ├── _forms.scss
+    │   ├── _globals.scss
     │   ├── _grid.scss
     │   ├── _icons.scss
+    │   ├── _images.scss
+    │   ├── _inputs.scss
+    │   ├── _links.scss
+    │   ├── _lists.scss
     │   ├── _responsive.scss
-    │   └── _sprites.scss
+    │   ├── _sprite.scss
+    │   ├── _tables.scss
+    │   └── _types.scss
     ├── modules
-    ├── style.scss
-    └── vendors
+    ├── vendors
+    ├── _all.scss
+    └── style.scss
 
 #### `_all.scss`
 
@@ -61,6 +73,7 @@ Folder that keep the styles for your application.
 Folder that keep the Core Styles for the project
 
 - `_config.scss`: inital Configuration
+- `_settings.scss`: variables
 - `_mixins.scss`: Sass Mixins
 - `_functions.scss`: Sass Functions
 - `_grid.scss`: grid system constructor
@@ -77,18 +90,27 @@ Folder that keep the Scaffolding style.
 
 #### `helpers`
 
-- `_grid.scss`: modular grid system
-- `_browser.scss`: utils classes for the browser
-- `_responsive.scss`: utils classes for responsive visibility rules
-- `_icons.scss`: your font icons customization goes here
-- `_sprites.scss`: Compass helper to generate sprite images
-- `_animation.scss`: your CSS animations goes here
+`_animation.scss`: CSS animations goes here
+`_buttons.scss`: helper classes for buttons
+`_custom.scss`: custom helpers goes here
+`_forms.scss`: helper classes for forms
+`_globals.scss`: global classes
+`_grid.scss`: modular grid system
+`_icons.scss`: font icons customization goes here
+`_images.scss`: helper classes for images
+`_inputs.scss`: helper classes for inputs
+`_links.scss`: helper classes for links
+`_lists.scss`: helper classes for lists
+`_responsive.scss`: helper classes for responsive visibility rules
+`_sprite.scss`: helper to generate sprites
+`_tables.scss`: helper classes for tables
+`_types.scss`: helper classes for types
 
 #### `modules`
 
-When you are developing a web application, it is very important to use standards and practices to maintain a high level of modularization / componentization. This directory is responsible for maintaining these modules. Name it according to the nomenclature given in your behavior layer (JavaScript).
+When you are developing a web application, it's very important to use standards and best practices to keep a high level of modularization. This folder is responsible for keeping your ui components. Name it according to the nomenclature given in your behavior layer (JavaScript). This will keep the standard nomenclature and structure for both layers.
 
-Example:
+Ex.:
 
     ./
     scripts
