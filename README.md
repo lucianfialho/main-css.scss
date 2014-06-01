@@ -1,4 +1,4 @@
-# Main CSS
+# Ambitious Styles - Sass Version
 
 The main CSS elements of Ambitious Framework.
 
@@ -8,7 +8,7 @@ The main CSS elements of Ambitious Framework.
 1 - Access your project/assets folder and clone this repository
 
 ```bash
-$ git clone git://github.com/ambitiousframework/main-css.git [folder]
+$ git clone git://github.com/ambitiousframework/css.scss.git [folder]
 ```
 
 2 - Profit!
