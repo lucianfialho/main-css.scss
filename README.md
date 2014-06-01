@@ -90,21 +90,21 @@ Folder that keep the Scaffolding style.
 
 #### `helpers`
 
-`_animation.scss`: CSS animations goes here
-`_buttons.scss`: helper classes for buttons
-`_custom.scss`: custom helpers goes here
-`_forms.scss`: helper classes for forms
-`_globals.scss`: global classes
-`_grid.scss`: modular grid system
-`_icons.scss`: font icons customization goes here
-`_images.scss`: helper classes for images
-`_inputs.scss`: helper classes for inputs
-`_links.scss`: helper classes for links
-`_lists.scss`: helper classes for lists
-`_responsive.scss`: helper classes for responsive visibility rules
-`_sprite.scss`: helper to generate sprites
-`_tables.scss`: helper classes for tables
-`_types.scss`: helper classes for types
+- `_animation.scss`: CSS animations goes here
+- `_buttons.scss`: helper classes for buttons
+- `_custom.scss`: custom helpers goes here
+- `_forms.scss`: helper classes for forms
+- `_globals.scss`: global classes
+- `_grid.scss`: modular grid system
+- `_icons.scss`: font icons customization goes here
+- `_images.scss`: helper classes for images
+- `_inputs.scss`: helper classes for inputs
+- `_links.scss`: helper classes for links
+- `_lists.scss`: helper classes for lists
+- `_responsive.scss`: helper classes for responsive visibility rules
+- `_sprite.scss`: helper to generate sprites
+- `_tables.scss`: helper classes for tables
+- `_types.scss`: helper classes for types
 
 #### `modules`
 
