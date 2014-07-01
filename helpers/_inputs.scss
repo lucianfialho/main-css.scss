@@ -39,10 +39,10 @@
     textarea,
     #{$all-text-inputs} {
         &.error {
-            border: 1px solid $red-light;
+            border: 1px solid lighten($color-error, 10%);
         }
         &.success {
-            border: 1px solid $green-light;
+            border: 1px solid lighten($color-success, 10%);
         }
     }
 

@@ -10,7 +10,7 @@
     input[type="submit"].btn,
     button[type="submit"].btn {
         @include button-structure(0, $base-font-size, 4px 12px);
-        margin-bottom: 0;
+        // margin-bottom: 0;
         line-height: $base-line-height;
         text-align: center;
         vertical-align: middle;
@@ -66,7 +66,7 @@
         &.btn-disabled,
         &[disabled] {
             cursor: default;
-            background: $blue-light !important;
+            background: $btn-disable-color !important;
             @include opacity(0.65);
             &:hover, &:focus {
                 cursor: default;
@@ -131,12 +131,13 @@
     }
 
     // Button Styles
-    .btn-inverse     { @include button-gradient($btn-type, $gray-dark); }
-    .btn-secondary   { @include button-gradient($btn-type, darken($gray-light, 12%)); }
-    .btn-primary     { @include button-gradient($btn-type, $blue); }
-    .btn-danger      { @include button-gradient($btn-type, $red); }
-    .btn-info        { @include button-gradient($btn-type, $yellow); }
-    .btn-success     { @include button-gradient($btn-type, $green); }
+    .btn-inverse     { @include button-gradient($btn-type, $btn-inverse-color); }
+    .btn-primary     { @include button-gradient($btn-type, $btn-primary-color); }
+    .btn-danger      { @include button-gradient($btn-type, $btn-error-color); }
+    .btn-warning     { @include button-gradient($btn-type, $btn-warning-color); }
+    .btn-highlight   { @include button-gradient($btn-type, $btn-highlight-color); }
+    .btn-info        { @include button-gradient($btn-type, $btn-info-color); }
+    .btn-success     { @include button-gradient($btn-type, $btn-success-color); }
 
     // Link buttons
     // --------------------------------------------------

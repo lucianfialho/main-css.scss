@@ -4,16 +4,16 @@
 
 @if $use-images == true {
 
-    %img-left {
+    .img-left {
         @include float(left);
         margin: 0 30px 30px 0;
         border: none;
     }
-    %img-right {
+    .img-right {
         @include float(right);
         margin: 0 0 30px 30px;
     }
-    %img-rounded  { @include border-radius($base-border-radius); }
+    .img-rounded  { @include border-radius($base-border-radius); }
 
     .img-circle   { @include img-circle(240px); }
     .img-polaroid {

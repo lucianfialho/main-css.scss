@@ -5,8 +5,6 @@
 .header {}
 .logo {}
 .nav {}
-.main {}
-.sidebar {}
-.footer {
-    @include sticky-footer(54px); // Footer stays at the bottom of the screen.
-}
+.content {}
+.search {}
+.footer {}
