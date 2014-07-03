@@ -24,6 +24,9 @@ $btn-type: "flat";
 // 6 - Use animations?
 $use-animations: true;
 
+// 7 - Use custom helpers instead of defaults?
+$use-custom: false;
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -80,12 +83,12 @@ $mobile:                767px;
 // You can also use the "_custom.scss" file to include your own helpers classes
 // By doing this, i think its more apropieta disable all the following helpers
 
-$use-global:         false; // Global
-$use-types:          false; // Types and Headings
-$use-links:          false; // Links
-$use-lists:          false; // Lists
-$use-tables:         false; // Tables
-$use-images:         false; // Images
+$use-global:         true;  // Global
+$use-types:          true;  // Types and Headings
+$use-links:          true;  // Links
+$use-lists:          true;  // Lists
+$use-tables:         true;  // Tables
+$use-images:         true;  // Images
 $use-forms:          true;  // Forms
 $use-inputs:         true;  // Inputs
 $use-buttons:        true;  // Buttons

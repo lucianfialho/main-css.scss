@@ -28,8 +28,8 @@
 
 // Define the sprites here
 // NOTE: $pad is optional!
-$normal: sprite-map("sprite/*.png", $pad: 10px);
-$retina: sprite-map("sprite2x/*.png", $pad: 20px);
+// $normal: sprite-map("sprite/*.png", $pad: 10px);
+// $retina: sprite-map("sprite2x/*.png", $pad: 20px);
 
 // Initialize Sprite
-@include retina-sprite(sprite, $normal, $retina);
+// @include retina-sprite(sprite, $normal, $retina);

@@ -48,16 +48,16 @@
     .text-muted { color: darken($gray-light, 20%); }
     a.text-muted:hover { color: darken($gray-light, 30%); }
 
-    .text-warning { color: $warning-text; }
-    a.text-warning:hover { color: darken($warning-text, 10%); }
+    .text-warning { color: $color-warning; }
+    a.text-warning:hover { color: darken($color-warning, 10%); }
 
-    .text-error { color: $error-text; }
-    a.text-error:hover { color: darken($error-text, 10%); }
+    .text-error { color: $color-error; }
+    a.text-error:hover { color: darken($color-error, 10%); }
 
-    .text-info { color: $info-text; }
-    a.text-info:hover { color: darken($info-text, 10%); }
+    .text-info { color: $color-info; }
+    a.text-info:hover { color: darken($color-info, 10%); }
 
-    .text-success { color: $success-text; }
-    a.text-success:hover { color: darken($success-text, 10%); }
+    .text-success { color: $color-success; }
+    a.text-success:hover { color: darken($color-success, 10%); }
 
 }

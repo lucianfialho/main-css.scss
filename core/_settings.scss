@@ -27,11 +27,11 @@ $gray-darker:               #222222;
 $gray-lighter:              #f8fafc;
 
 // Common Colors
-$main-darker:               #1d3348;
-$main-dark:                 #5189c5;
-$main:                      #b1c2e5;
-$main-light:                #b0b8bf;
-$main-lighter:              #e4e8eb;
+$color-main-darker:         #1d3348;
+$color-main-dark:           #5189c5;
+$color-main:                #b1c2e5;
+$color-main-light:          #b0b8bf;
+$color-main-lighter:        #e4e8eb;
 
 // Message Colors
 $color-info:                #0064cd;
@@ -45,7 +45,7 @@ $color-inverse:             #222222;
 $background-color:      $white;
 $title-color:           $gray-darker;
 $text-color:            $gray;
-$link-color:            $main-darker;
+$link-color:            $color-main-darker;
 $link-color-hover:      lighten($link-color, 30%);
 $link-color-focus:      lighten($link-color, 30%);
 $link-color-active:     lighten($link-color, 30%);
@@ -69,7 +69,7 @@ $base-font-weight:        300;
 
 
 $headings-font-family:    inherit;
-$headings-color:          $main-darker;
+$headings-color:          $color-main-darker;
 
 
 // Component sizing
@@ -95,16 +95,21 @@ $table-background-hover:         #f5f5f5;     // for hover
 $table-border:                   #ddd;        // table and cell border
 
 
-// Forms
+// Forms and Inputs
 // -------------------------
-$input-background:               $white;
-$input-border:                   $gray-light;
-$input-border-hover:             darken($main-light, 10%);
-$input-border-radius:            $base-border-radius;
+$input-background:               lighten($color-main-lighter, 5%);
+$input-border:                   lighten($color-main-light, 15%);
+$input-background-hover:         lighten($color-main-lighter, 8%);
+$input-border-hover:             darken($color-main-light, 15%);
+$input-border-radius:            0;
 $input-disabled-background:      $gray-lighter;
 $form-actions-background:        #f5f5f5;
 $placeholder-text:               $gray-light;
-$input-height:                   $base-line-height + 10px;
+$label-text:                     $color-main-darker;
+$input-text:                     $gray;
+$input-padding:                  8px 6px;
+$input-font-size:                $base-font-size - 2;
+$label-font-size:                $base-font-size - 4;
 
 
 // Buttons
@@ -112,6 +117,14 @@ $input-height:                   $base-line-height + 10px;
 // Compass extension by Jared Hardy - http://www.jaredhardy.com
 $btn-base-color:                rgba(11, 153, 194, 1);
 $btn-second-color:              false;
+$btn-primary-color:             $color-main;
+$btn-disable-color:             lighten($color-info, 5%);
+$btn-inverse-color:             $color-inverse;
+$btn-error-color:               $color-error;
+$btn-warning-color:             $color-warning;
+$btn-info-color:                $color-info;
+$btn-success-color:             $color-success;
+$btn-highlight-color:           $color-highlight;
 $btn-border-radius:             5px;
 $btn-padding:                   0.5em 1.5em;
 $btn-font-size:                 14px;

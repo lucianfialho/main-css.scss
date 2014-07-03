@@ -1,4 +1,4 @@
-# Ambitious Styles - Sass Version
+# Ambitious Main CSS - Sass Version
 
 The main CSS elements of Ambitious Framework.
 

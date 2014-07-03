@@ -1,5 +1,5 @@
 //
-// BASE MIXINS
+// Base
 // --------------------------------------------------
 
 
@@ -73,7 +73,6 @@ $all-text-inputs-focus: ();
     @else if $size == "full" {
         display: block;
         width: 100%;
-        min-height: $input-height; // Make inputs at least the height of their button counterpart(line-height + padding + border)
         @include box-sizing(border-box); // Makes inputs behave like true block-level elements
     }
 }
@@ -431,6 +430,16 @@ $placeholders: '-webkit-input-placeholder',
     // Webkit
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
+}
+
+
+// Center-align a block level element
+// ----------------------------------
+@mixin center-block() {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
