@@ -6,41 +6,41 @@
 
     // IE10 Metro responsive
     // Required for Windows 8 Metro split-screen snapping with IE10
-    // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+    // Source: http://timkadlec#{$use-prefix}com/2012/10/ie10-snap-mode-and-responsive-design/
     @-ms-viewport{
         width: device-width;
     }
 
     // Helper Classes
-    .visible-phone     { display: none !important; }
-    .visible-tablet    { display: none !important; }
+    #{$use-prefix}visible-phone     { display: none !important; }
+    #{$use-prefix}visible-tablet    { display: none !important; }
 
-    .hidden-phone      { }
-    .hidden-tablet     { }
+    #{$use-prefix}hidden-phone      { }
+    #{$use-prefix}hidden-tablet     { }
 
-    .hidden-desktop    { display: none !important; }
-    .visible-desktop   { display: inherit !important; }
+    #{$use-prefix}hidden-desktop    { display: none !important; }
+    #{$use-prefix}visible-desktop   { display: inherit !important; }
 
-    .visible-print    { display: none !important; }
-    .hidden-print     { }
+    #{$use-prefix}visible-print    { display: none !important; }
+    #{$use-prefix}hidden-print     { }
 
     @media print {
-        .visible-print  { display: inherit !important; }
-        .hidden-print   { display: none !important; }
+        #{$use-prefix}visible-print  { display: inherit !important; }
+        #{$use-prefix}hidden-print   { display: none !important; }
     }
 
 
     @include respond-to(mobile) {
 
         // Helper Classes
-        .hidden-desktop  { display: inherit !important; }
-        .visible-desktop { display: none !important; }
+        #{$use-prefix}hidden-desktop  { display: inherit !important; }
+        #{$use-prefix}visible-desktop { display: none !important; }
 
-        .hidden-tablet   { display: inherit !important; }
-        .visible-tablet  { display: none !important; }
+        #{$use-prefix}hidden-tablet   { display: inherit !important; }
+        #{$use-prefix}visible-tablet  { display: none !important; }
 
-        .hidden-phone    { display: none !important; }
-        .visible-phone   { display: inherit !important; }
+        #{$use-prefix}hidden-phone    { display: none !important; }
+        #{$use-prefix}visible-phone   { display: inherit !important; }
 
         // General Structure
         body {
@@ -57,23 +57,23 @@
         // Grid System
         @if $use-grid-classes == true {
 
-            .row {
+            #{$use-prefix}row {
                 width: 100%;
             }
             [class*="span"],
-            .row [class*="span"] {
+            #{$use-prefix}row [class*="span"] {
                 float: none;
                 display: block;
                 width: 100%;
                 margin-left: 0;
                 @include box-sizing(border-box);
             }
-            .span12,
-            .row .span12 {
+            #{$use-prefix}span12,
+            #{$use-prefix}row > #{$use-prefix}span12 {
                 width: 100%;
                 @include box-sizing(border-box);
             }
-            .row [class*="push"]:first-child {
+            #{$use-prefix}row [class*="push"]:first-child {
                 margin-left: 0;
             }
 
@@ -84,14 +84,14 @@
 
             textarea,
             #{$all-text-inputs},
-            input.input-mini,
-            input.input-small,
-            input.input-medium,
-            input.input-large,
-            textarea.input-mini,
-            textarea.input-small,
-            textarea.input-medium,
-            textarea.input-large,
+            input#{$use-prefix}input-mini,
+            input#{$use-prefix}input-small,
+            input#{$use-prefix}input-medium,
+            input#{$use-prefix}input-large,
+            textarea#{$use-prefix}input-mini,
+            textarea#{$use-prefix}input-small,
+            textarea#{$use-prefix}input-medium,
+            textarea#{$use-prefix}input-large,
             input[class*="span"],
             select[class*="span"],
             textarea[class*="span"] {
@@ -121,14 +121,14 @@
         }
 
         // Helper Classes
-        .hidden-desktop  { display: inherit !important; }
-        .visible-desktop { display: none !important; }
+        #{$use-prefix}hidden-desktop  { display: inherit !important; }
+        #{$use-prefix}visible-desktop { display: none !important; }
 
-        .hidden-tablet   { display: none !important; }
-        .visible-tablet  { display: inherit !important; }
+        #{$use-prefix}hidden-tablet   { display: none !important; }
+        #{$use-prefix}visible-tablet  { display: inherit !important; }
 
-        .hidden-phone    { display: inherit !important; }
-        .visible-phone   { display: none !important; }
+        #{$use-prefix}hidden-phone    { display: inherit !important; }
+        #{$use-prefix}visible-phone   { display: none !important; }
 
     }
 
@@ -136,14 +136,14 @@
     @include respond-to(tvscreen) {
 
         // Helper Classes
-        .hidden-desktop    { display: none !important; }
-        .visible-desktop   { display: inherit !important ; }
+        #{$use-prefix}hidden-desktop    { display: none !important; }
+        #{$use-prefix}visible-desktop   { display: inherit !important ; }
 
-        .visible-tablet    { display: none !important; }
-        .visible-phone     { display: none !important; }
+        #{$use-prefix}visible-tablet    { display: none !important; }
+        #{$use-prefix}visible-phone     { display: none !important; }
 
-        .hidden-tablet     { display: none !important; }
-        .hidden-phone      { display: none !important; }
+        #{$use-prefix}hidden-tablet     { display: none !important; }
+        #{$use-prefix}hidden-phone      { display: none !important; }
 
     }
 

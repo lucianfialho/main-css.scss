@@ -4,19 +4,19 @@
 
 @if $use-images == true {
 
-    .img-left {
+    #{$use-prefix}img-left {
         @include float(left);
         margin: 0 30px 30px 0;
         border: none;
     }
-    .img-right {
+    #{$use-prefix}img-right {
         @include float(right);
         margin: 0 0 30px 30px;
     }
-    .img-rounded  { @include border-radius($base-border-radius); }
+    #{$use-prefix}img-rounded  { @include border-radius($base-border-radius); }
 
-    .img-circle   { @include img-circle(240px); }
-    .img-polaroid {
+    #{$use-prefix}img-circle   { @include img-circle(240px); }
+    #{$use-prefix}img-polaroid {
         padding: 4px;
         background-color: $white;
         border: 1px solid $gray-light;

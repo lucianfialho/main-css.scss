@@ -4,44 +4,44 @@
 
 @if $use-global == true {
 
-    .hide-text    { @include hide-text; }
-    .is-hide      { display: none; }
-    .is-visible   { display: block; }
-    .is-hidden    { visibility: hidden; }
+    #{$use-prefix}hide-text    { @include hide-text; }
+    #{$use-prefix}is-hide      { display: none; }
+    #{$use-prefix}is-visible   { display: block; }
+    #{$use-prefix}is-hidden    { visibility: hidden; }
 
-    .has-clear    { clear: both; }
-    .clearfix     { @include clearfix; }
+    #{$use-prefix}has-clear    { clear: both; }
+    #{$use-prefix}clearfix     { @include clearfix; }
 
-    .pull-left    { @include float(left); }
-    .pull-right   { @include float(right); }
-    .is-block     {
+    #{$use-prefix}pull-left    { @include float(left); }
+    #{$use-prefix}pull-right   { @include float(right); }
+    #{$use-prefix}is-block     {
         @include reset-float;
         margin-right: auto;
         margin-left: auto;
     }
 
-    .has-radius       { @include border-radius($base-border-radius); }
-    .has-radius-large { @include border-radius($border-radius-large); }
-    .has-radius-small { @include border-radius($border-radius-small); }
-    .is-rounded       { @include border-radius(50%); }
+    #{$use-prefix}has-radius       { @include border-radius($base-border-radius); }
+    #{$use-prefix}has-radius-large { @include border-radius($border-radius-large); }
+    #{$use-prefix}has-radius-small { @include border-radius($border-radius-small); }
+    #{$use-prefix}is-rounded       { @include border-radius(50%); }
 
-    .no-filter { filter: none; } // for gte IE9 only
+    #{$use-prefix}no-filter { filter: none; } // for gte IE9 only
 
-    .is-fixed {
+    #{$use-prefix}is-fixed {
         position: fixed;
         width: 100%;
         top: 0; left: 0;
         z-index: 9999;
     }
 
-    .overlay {
+    #{$use-prefix}overlay {
         background: rgba(#000000, 0.65);
         border-top: 1px solid rgba(#000000, 0.90);
         height: 100%;
         width: 100%;
     }
 
-    .breakline {
+    #{$use-prefix}breakline {
         margin: 5px auto;
         border-bottom: 1px solid rgba(0,0,0,0.75);
         @include clearfix;

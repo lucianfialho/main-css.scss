@@ -20,25 +20,22 @@ $ git clone git://github.com/ambitiousframework/css.scss.git [folder]
 
     .
     ├── app
+    │   ├── _helpers.scss
     │   ├── _layout.scss
     │   ├── _legacy.scss
     │   └── _responsive.scss
     ├── core
     │   ├── _config.scss
-    │   ├── _functions.scss
     │   ├── _grid.scss
     │   ├── _mixins.scss
     │   ├── _print.scss
     │   └── _settings.scss
     ├── general
     │   ├── _base.scss
-    │   ├── _forms.scss
-    │   ├── _reset.scss
-    │   └── _tables.scss
+    │   └── _reset.scss
     ├── helpers
     │   ├── _animation.scss
     │   ├── _buttons.scss
-    │   ├── _custom.scss
     │   ├── _forms.scss
     │   ├── _globals.scss
     │   ├── _grid.scss
@@ -67,6 +64,7 @@ Folder that keep the styles for your application.
 - `_layout.scss`: your Application Style goes here
 - `_reponsive.scss`: your Application Responsive rules goes here
 - `_legacy.scss`:your Legacy (old browser support) goes here
+- `_helpers.scss`: custom helpers goes here
 
 #### `core`
 
@@ -74,8 +72,7 @@ Folder that keep the Core Styles for the project
 
 - `_config.scss`: inital Configuration
 - `_settings.scss`: variables
-- `_mixins.scss`: Sass Mixins
-- `_functions.scss`: Sass Functions
+- `_mixins.scss`: mixins
 - `_grid.scss`: grid system constructor
 - `_print.scss`: media query for print
 
@@ -84,15 +81,12 @@ Folder that keep the Core Styles for the project
 Folder that keep the Scaffolding style.
 
 - `_reset.scss`: CSS Normalize
-- `_base.scss`: general structure
-- `_tables.scss`: general table style
-- `_forms.scss`: general form style
+- `_base.scss`: Base Structure
 
 #### `helpers`
 
 - `_animation.scss`: CSS animations goes here
 - `_buttons.scss`: helper classes for buttons
-- `_custom.scss`: custom helpers goes here
 - `_forms.scss`: helper classes for forms
 - `_globals.scss`: global classes
 - `_grid.scss`: modular grid system

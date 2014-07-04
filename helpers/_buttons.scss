@@ -5,10 +5,7 @@
 @if $use-buttons == true {
 
     // Button Structure
-    .btn,
-    button.btn,
-    input[type="submit"].btn,
-    button[type="submit"].btn {
+    #{$use-prefix}btn {
         @include button-structure(0, $base-font-size, 4px 12px);
         // margin-bottom: 0;
         line-height: $base-line-height;
@@ -26,16 +23,16 @@
             *padding-bottom: 3px;
             @include legacy-inline-block();
             @include legacy-restore-left-whitespace();
-            &.btn-extra,
-            &.btn-large {
+            &#{$use-prefix}btn-extra,
+            &#{$use-prefix}btn-large {
                 *padding-top: 7px;
                 *padding-bottom: 7px;
             }
-            &.btn-small {
+            &#{$use-prefix}btn-small {
                 *padding-top: 3px;
                 *padding-bottom: 3px;
             }
-            &.btn-mini {
+            &#{$use-prefix}btn-mini {
                 *padding-top: 1px;
                 *padding-bottom: 1px;
             }
@@ -56,14 +53,13 @@
         }
 
         // Active state
-        &.active,
         &:active {
             outline: 0;
             color: $white;
         }
 
         // Disabled state
-        &.btn-disabled,
+        &#{$use-prefix}btn-disabled,
         &[disabled] {
             cursor: default;
             background: $btn-disable-color !important;
@@ -78,37 +74,37 @@
     // --------------------------------------------------
 
     // Extra Large
-    .btn-extra { @include button-structure(0, $font-size-large * 2 , 18px 26px); }
-    .btn-extra [class^="icon-"],
-    .btn-extra [class*=" icon-"] {
+    #{$use-prefix}btn-extra { @include button-structure(0, $font-size-large * 2 , 18px 26px); }
+    #{$use-prefix}btn-extra [class^="icon-"],
+    #{$use-prefix}btn-extra [class*=" icon-"] {
         margin-top: 11px;
     }
 
     // Large
-    .btn-large { @include button-structure(0, $font-size-large, 11px 19px); }
-    .btn-large [class^="icon-"],
-    .btn-large [class*=" icon-"] {
+    #{$use-prefix}btn-large { @include button-structure(0, $font-size-large, 11px 19px); }
+    #{$use-prefix}btn-large [class^="icon-"],
+    #{$use-prefix}btn-large [class*=" icon-"] {
         margin-top: 4px;
     }
 
     // Small
-    .btn-small { @include button-structure(0, $font-size-small, 2px 10px); }
-    .btn-small [class^="icon-"],
-    .btn-small [class*=" icon-"] {
+    #{$use-prefix}btn-small { @include button-structure(0, $font-size-small, 2px 10px); }
+    #{$use-prefix}btn-small [class^="icon-"],
+    #{$use-prefix}btn-small [class*=" icon-"] {
         margin-top: 0;
     }
 
     // Mini
-    .btn-mini { @include button-structure(0, $font-size-large, 0px 6px); }
-    .btn-mini [class^="icon-"],
-    .btn-mini [class*=" icon-"] {
+    #{$use-prefix}btn-mini { @include button-structure(0, $font-size-large, 0px 6px); }
+    #{$use-prefix}btn-mini [class^="icon-"],
+    #{$use-prefix}btn-mini [class*=" icon-"] {
         margin-top: -1px;
     }
 
     // Block button
     // -------------------------
 
-    .btn-block {
+    #{$use-prefix}btn-block {
         display: block;
         width: 100%;
         padding-left: 0;
@@ -117,7 +113,7 @@
     }
 
     // Vertically space out multiple block buttons
-    .btn-block + .btn-block {
+    #{$use-prefix}btn-block + #{$use-prefix}btn-block {
         margin-top: 5px;
     }
 
@@ -125,43 +121,43 @@
     input[type="submit"],
     input[type="reset"],
     input[type="button"] {
-        &.btn-block {
+        &#{$use-prefix}btn-block {
             width: 100%;
         }
     }
 
     // Button Styles
-    .btn-inverse     { @include button-gradient($btn-type, $btn-inverse-color); }
-    .btn-primary     { @include button-gradient($btn-type, $btn-primary-color); }
-    .btn-danger      { @include button-gradient($btn-type, $btn-error-color); }
-    .btn-warning     { @include button-gradient($btn-type, $btn-warning-color); }
-    .btn-highlight   { @include button-gradient($btn-type, $btn-highlight-color); }
-    .btn-info        { @include button-gradient($btn-type, $btn-info-color); }
-    .btn-success     { @include button-gradient($btn-type, $btn-success-color); }
+    #{$use-prefix}btn-inverse   { @include button-gradient($btn-type, $btn-inverse-color); }
+    #{$use-prefix}btn-primary   { @include button-gradient($btn-type, $btn-primary-color); }
+    #{$use-prefix}btn-danger    { @include button-gradient($btn-type, $btn-error-color); }
+    #{$use-prefix}btn-warning   { @include button-gradient($btn-type, $btn-warning-color); }
+    #{$use-prefix}btn-highlight { @include button-gradient($btn-type, $btn-highlight-color); }
+    #{$use-prefix}btn-info      { @include button-gradient($btn-type, $btn-info-color); }
+    #{$use-prefix}btn-success   { @include button-gradient($btn-type, $btn-success-color); }
 
     // Link buttons
     // --------------------------------------------------
 
     // Make a button look and behave like a link
-    .btn-link,
-    .btn-link:active,
-    .btn-link[disabled] {
+    #{$use-prefix}btn-link,
+    #{$use-prefix}btn-link:active,
+    #{$use-prefix}btn-link[disabled] {
         background-color: transparent;
         background-image: none;
     }
-    .btn-link {
+    #{$use-prefix}btn-link {
         border-color: transparent;
         cursor: pointer;
         color: $white;
     }
-    .btn-link:hover,
-    .btn-link:focus {
+    #{$use-prefix}btn-link:hover,
+    #{$use-prefix}btn-link:focus {
         color: $link-color-hover;
         text-decoration: underline;
         background-color: transparent;
     }
-    .btn-link[disabled]:hover,
-    .btn-link[disabled]:focus {
+    #{$use-prefix}btn-link[disabled]:hover,
+    #{$use-prefix}btn-link[disabled]:focus {
         color: $gray-dark;
         text-decoration: none;
     }

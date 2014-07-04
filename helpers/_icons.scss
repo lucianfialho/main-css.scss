@@ -41,12 +41,12 @@
     // increased font size for icon-large
     [class^="icon-"],
     [class*=" icon-"] {
-        &.icon-fixed-width {
+        &#{$use-prefix}icon-fixed-width {
             display: inline-block;
             width: (16em/14);
             text-align: right;
             padding-right: (4em/14);
-            &.icon-large {
+            &#{$use-prefix}icon-large {
                 width: (20em/14);
             }
         }
@@ -62,10 +62,10 @@
     // Icon States
     // ----------------------------
     @if $icons-states == true {
-        .icon-muted  { color: $icon-muted; }
-        .icon-light  { color: $icon-light; }
-        .icon-dark   { color: $icon-dark; }
-        .icon-border {
+        #{$use-prefix}icon-muted  { color: $icon-muted; }
+        #{$use-prefix}icon-light  { color: $icon-light; }
+        #{$use-prefix}icon-dark   { color: $icon-dark; }
+        #{$use-prefix}icon-border {
             border: solid 1px $icon-border;
             padding: .2em .25em .15em;
             @include border-radius(3px);
@@ -76,31 +76,31 @@
     // ----------------------------
     @if $icons-sizes == true {
 
-        .icon-2x {
+        #{$use-prefix}icon-2x {
             font-size: 2em;
-            &.icon-border {
+            &#{$use-prefix}icon-border {
                 border-width: 2px;
                 @include border-radius($icons-radius);
             }
         }
-        .icon-3x {
+        #{$use-prefix}icon-3x {
             font-size: 3em;
-            &.icon-border {
+            &#{$use-prefix}icon-border {
                 border-width: 3px;
                 @include border-radius($icons-radius + 2);
             }
         }
-        .icon-4x {
+        #{$use-prefix}icon-4x {
             font-size: 4em;
-            &.icon-border {
+            &#{$use-prefix}icon-border {
                 border-width: 4px;
                 @include border-radius($icons-radius + 3);
             }
         }
 
-        .icon-5x {
+        #{$use-prefix}icon-5x {
             font-size: 5em;
-            &.icon-border {
+            &#{$use-prefix}icon-border {
                 @include border-radius($icons-radius + 5);
             }
         }

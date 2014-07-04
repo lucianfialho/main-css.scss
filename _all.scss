@@ -24,8 +24,6 @@
 // -------------------
 // RESET.................................. CSS Normalize
 // BASE................................... Scaffolding
-// TABLE.................................. Basic Table Style
-// FORM................................... Basic Form Style
 //
 // APP
 // -------------------
@@ -71,13 +69,12 @@
 // GENERAL
 @import "general/reset";
 @import "general/base";
-@import "general/tables";
-@import "general/forms";
 
 // APP
 @import "app/layout";
 @import "app/responsive";
 @import "app/legacy";
+@import "app/helpers";
 
 // HELPERS
 @import "helpers/animation";
@@ -94,7 +91,6 @@
 @import "helpers/sprite";
 @import "helpers/tables";
 @import "helpers/types";
-@import "helpers/custom";
 
 // MODULES
 // your ui-component goes here

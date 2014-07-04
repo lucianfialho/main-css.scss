@@ -5,7 +5,7 @@
 @if $use-tables == true {
 
     // Condensed
-    .table-condensed {
+    #{$use-prefix}table-condensed {
         th,
         td {
             padding: 4px 5px;
@@ -13,7 +13,7 @@
     }
 
     // Bordered
-    .table-bordered {
+    #{$use-prefix}table-bordered {
         border: 1px solid $table-border;
         border-collapse: separate; // Done so we can round those corners!
 
@@ -88,7 +88,7 @@
     }
 
     // Striped
-    .table-striped {
+    #{$use-prefix}table-striped {
         tbody {
             > tr:nth-child(odd) > td,
             > tr:nth-child(odd) > th {

@@ -7,16 +7,16 @@
     // Base
     // -------------------------------
 
-    .#{$class-container} {
+    #{$use-prefix}#{$class-container} {
         @include container;
     }
 
-    .#{$class-row} {
+    #{$use-prefix}#{$class-row} {
         @include row;
     }
 
     @for $i from 1 through $columns {
-        .#{$class-column}#{$i} {
+        #{$use-prefix}#{$class-column}#{$i} {
             @include column($i)
         }
     }
@@ -25,12 +25,12 @@
     // -------------------------------
 
     // First Column
-    .first,
-    .alpha { @include alpha; }
+    #{$use-prefix}first,
+    #{$use-prefix}alpha { @include alpha; }
 
     // Last Column
-    .last,
-    .omega { @include omega; }
+    #{$use-prefix}last,
+    #{$use-prefix}omega { @include omega; }
 
 
     @if $use-grid-offset == true {
@@ -38,26 +38,26 @@
 
         // Add Columns of empty space as margin before an element.
         @for $i from 1 through ($columns) {
-            .#{$class-push}#{$i} {
+            #{$use-prefix}#{$class-push}#{$i} {
                 @include push($i);
             }
         }
 
         // Add Columns of empty space as margin after an element.
         @for $i from 1 through ($columns) {
-            .#{$class-pull}#{$i} {
+            #{$use-prefix}#{$class-pull}#{$i} {
                 @include pull($i);
             }
         }
 
         // Add Columns of empty space as margin after and before an element.
         @for $i from 1 through ($columns) {
-            .#{$class-squish}#{$i} {
+            #{$use-prefix}#{$class-squish}#{$i} {
                 @include squish($i);
             }
         }
 
-        .centered {
+        #{$use-prefix}centered {
             float: none;
             display: block;
             margin: 0px auto;

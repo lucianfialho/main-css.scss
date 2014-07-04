@@ -5,59 +5,59 @@
 @if $use-inputs == true {
 
     // Input Sizes
-    .input-mini   { @include input-size("mini"); }
-    .input-small  { @include input-size("small"); }
-    .input-medium { @include input-size("medium"); }
-    .input-large  { @include input-size("large"); }
-    .input-full   { @include input-size("full"); }
+    #{$use-prefix}input-mini   { @include input-size("mini"); }
+    #{$use-prefix}input-small  { @include input-size("small"); }
+    #{$use-prefix}input-medium { @include input-size("medium"); }
+    #{$use-prefix}input-large  { @include input-size("large"); }
+    #{$use-prefix}input-full   { @include input-size("full"); }
 
     // Checkbox and Radio Inline
-    .radio,
-    .checkbox {
+    #{$use-prefix}radio,
+    #{$use-prefix}checkbox {
         min-height: $base-line-height; // clear the floating input if there is no label text
         padding-left: 20px;
     }
-    .radio input[type="radio"],
-    .checkbox input[type="checkbox"] {
+    #{$use-prefix}radio input[type="radio"],
+    #{$use-prefix}checkbox input[type="checkbox"] {
         float: left;
         margin-left: -20px;
     }
 
-    .radio.inline,
-    .checkbox.inline {
+    #{$use-prefix}radio#{$use-prefix}inline,
+    #{$use-prefix}checkbox#{$use-prefix}inline {
         @include inline-block;
         padding-top: 5px;
         margin-bottom: 0;
         vertical-align: middle;
     }
-    .radio.inline + .radio.inline,
-    .checkbox.inline + .checkbox.inline {
+    #{$use-prefix}radio#{$use-prefix}inline + #{$use-prefix}radio#{$use-prefix}inline,
+    #{$use-prefix}checkbox#{$use-prefix}inline + #{$use-prefix}checkbox#{$use-prefix}inline {
         margin-left: 10px; // space out consecutive inline controls
     }
 
     // Input States
     textarea,
     #{$all-text-inputs} {
-        &.error {
+        &#{$use-prefix}error {
             border: 1px solid lighten($color-error, 10%);
         }
-        &.success {
+        &#{$use-prefix}success {
             border: 1px solid lighten($color-success, 10%);
         }
     }
 
     // Help Text
-    .help-block,
-    .help-inline {
+    #{$use-prefix}help-block,
+    #{$use-prefix}help-inline {
         color: lighten($text-color, 15%); // lighten the text some for contrast
     }
 
-    .help-block {
+    #{$use-prefix}help-block {
         display: block; // account for any element using help-block
         margin-bottom: $base-line-height / 2;
     }
 
-    .help-inline {
+    #{$use-prefix}help-inline {
         display: inline-block;
         @if $legacy-support == true {
             @include legacy-inline-block;
@@ -67,20 +67,20 @@
     }
 
     // Uneditable inputs
-    .uneditable-input,
-    .uneditable-textarea {
+    #{$use-prefix}uneditable-input,
+    #{$use-prefix}uneditable-textarea {
         color: $gray-light;
         background-color: darken($input-background, 1%);
         border-color: $input-border;
         cursor: not-allowed;
     }
 
-    .uneditable-input { // For text that needs to appear as an input but should not be an input
+    #{$use-prefix}uneditable-input { // For text that needs to appear as an input but should not be an input
     overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
     white-space: nowrap;
     }
 
-    .uneditable-textarea { // Make uneditable textareas behave like a textarea
+    #{$use-prefix}uneditable-textarea { // Make uneditable textareas behave like a textarea
         width: auto;
         height: auto;
     }
