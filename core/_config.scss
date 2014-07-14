@@ -69,10 +69,9 @@ $class-pull:            "pull";
 $class-squish:          "squish";
 
 // Set your breakpoints
-$tvscreen:              1921px;
-$desktop:               1920px;
-$tablet:                768px;
-$mobile:                767px;
+$tvscreen:              1440px; // min-width to 1440px
+$tablet:                980px;  // min-width to 768px ($mobile + 1) and max-width to 980px
+$mobile:                767px;  // max-width to 767px
 
 
 

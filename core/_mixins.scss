@@ -407,11 +407,11 @@ $placeholders: '-webkit-input-placeholder',
     }
 
     @if $media-query == tablet {
-        @media (min-width: $tablet) and  (max-width: $desktop) { @content; }
+        @media (min-width: $mobile + 1) and (max-width: $tablet) { @content; }
     }
 
     @if $media-query == mobile {
-        @media (max-width:$mobile) { @content; }
+        @media (max-width: $mobile) { @content; }
     }
 
 }
